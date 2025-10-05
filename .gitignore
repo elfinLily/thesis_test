@@ -1,3 +1,9 @@
+# raw 데이터 및 논문 관련
+data/raw/
+data/selected/
+docs/
+results/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]

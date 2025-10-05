@@ -1,0 +1,91 @@
+# 프로젝트 경로 설정
+# adaptive-llm-router/config/paths.yaml
+
+# 기본 디렉토리 구조
+directories:
+  project_root: "."
+  data_root: "data"
+  src_root: "src"
+  results_root: "results"
+  docs_root: "docs"
+  config_root: "config"
+  experiments_root: "experiments"
+  notebooks_root: "notebooks"
+  tests_root: "tests"
+
+# 데이터 관련 경로
+data_paths:
+  raw_data: "data/raw"
+  processed_data: "data/processed"
+  selected_data: "data/selected"
+  results_data: "data/results"
+  
+  # 도메인별 원본 데이터
+  math_problems: "data/raw/math/training/labeling"
+  legal_data: "data/raw/legal_data"
+  general_knowledge: "data/raw/general_knowledge"
+  
+  # 선별된 데이터
+  selected_math: "data/selected/selected_math_problems.json"
+  selected_legal: "data/selected/selected_legal_problems.json"
+  selected_general: "data/selected/selected_general_problems.json"
+  
+  # 모델 응답 결과
+  model_responses: "data/results/model_responses"
+  evaluation_results: "data/results/evaluation"
+
+# 결과 저장 경로
+results_paths:
+  figures: "results/figures"
+  tables: "results/tables" 
+  reports: "results/reports"
+  experiments: "results/experiments"
+
+# 문서 경로
+docs_paths:
+  paper: "docs/paper"
+  meeting_notes: "docs/meeting_notes"
+  progress_log: "docs/progress_log.md"
+  references: "docs/paper/references.bib"
+
+# 설정 파일 경로
+config_paths:
+  model_config: "config/model_config.yaml"
+  experiment_config: "config/experiment_config.yaml"
+  api_keys: ".env"
+
+# 로그 경로
+log_paths:
+  main_log: "logs/main.log"
+  error_log: "logs/error.log"
+  experiment_log: "logs/experiments.log"
+
+# 파일명 규칙
+filenames:
+  # 데이터 선별 결과
+  selected_math: "selected_math_problems.json"
+  selected_math_summary: "selected_math_problems_summary.json"
+  selected_legal: "selected_legal_problems.json"
+  selected_legal_summary: "selected_legal_problems_summary.json"
+  selected_general: "selected_general_problems.json"
+  selected_general_summary: "selected_general_problems_summary.json"
+  
+  # 모델 응답 결과
+  model_responses_template: "responses_{model}_{timestamp}.json"
+  all_model_responses: "all_model_responses.json"
+  
+  # 평가 결과
+  evaluation_results: "evaluation_results.json"
+  quality_scores: "quality_scores.csv"
+  performance_metrics: "performance_metrics.csv"
+  
+  # 실험 결과
+  experiment_log: "experiment_{exp_id}_{timestamp}.json"
+  
+  # 논문 관련
+  paper_draft: "draft.md"
+  references: "references.bib"
+  
+  # 로그 파일
+  main_log: "main_{date}.log"
+  error_log: "error_{date}.log"

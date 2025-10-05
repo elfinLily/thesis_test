@@ -1,0 +1,36 @@
+# Conda 가상환경 설정 파일
+
+name: thesis_test
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  - python=3.11
+  
+  # Conda로 설치 (안정성 우선)
+  - numpy>=1.21.0
+  - pandas>=1.5.0
+  - scipy>=1.9.0
+  - matplotlib>=3.5.0
+  - seaborn>=0.12.0
+  - scikit-learn>=1.1.0
+  - pyyaml>=6.0
+  - jupyter>=1.0.0
+  - ipykernel>=6.0.0
+  - tqdm>=4.64.0
+  - requests>=2.28.0
+  
+  # PyTorch (CPU 버전, GPU 필요시 수정)
+  - pytorch>=2.0.0
+  - cpuonly  # GPU 사용시 제거
+  
+  # pip로 설치할 패키지들
+  - pip
+  - pip:
+    - python-dotenv>=1.0.0
+    - openai>=1.0.0
+    - anthropic>=0.7.0
+    - google-generativeai>=0.3.0
+    - sentence-transformers>=2.2.0
+    - black>=22.0.0
