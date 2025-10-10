@@ -22,7 +22,7 @@ data_paths:
   
   # 도메인별 원본 데이터
   math_problems: "data/raw/math/training/labeling"
-  legal_data: "data/raw/legal_data"
+  legal_data: "data/raw/medi_law/training/labeling"
   general_knowledge: "data/raw/general_knowledge"
   
   # 선별된 데이터
@@ -69,7 +69,9 @@ filenames:
   selected_legal_summary: "selected_legal_problems_summary.json"
   selected_general: "selected_general_problems.json"
   selected_general_summary: "selected_general_problems_summary.json"
-  
+  selected_legal_medical: "selected_legal_medical.json"
+  selected_legal_medical_summary: "selected_legal_medical_summary.json"
+
   # 모델 응답 결과
   model_responses_template: "responses_{model}_{timestamp}.json"
   all_model_responses: "all_model_responses.json"
