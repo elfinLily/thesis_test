@@ -8,17 +8,17 @@
 """
 
 try:
-    from .selector import MathProblemSelector, select_math_problems
+    from .base_selector import BaseSelector
+    from .math_selector import MathProblemSelector, select_math_problems
+    from .legal_medical_selector import LegalMedicalSelector, select_legal_medical_documents
 except ImportError:
     pass
 
-# try:
-#     from .preprocessor import DataPreprocessor
-# except ImportError:
-#     pass
 
 __all__ = [
-    "MathProblemSelector",
-    "select_math_problems",
-    "DataPreprocessor"
+    "BaseSelector",
+    "MathProblemSelector",   
+    "select_math_problems", 
+    "LegalMedicalSelector",              
+    "select_legal_medical_documents",   
 ]
